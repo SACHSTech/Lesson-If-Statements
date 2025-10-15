@@ -142,7 +142,7 @@ If it’s `0`, print `"Zero"`.
 int num = readInt("Enter a number: ");
 ```
 
-Expected output examples:
+#### Example Runs:
 ```
 Enter a number: 5
 Positive
@@ -178,7 +178,7 @@ Customers pay a delivery fee based on distance:
 
 Write the logic to output the correct delivery cost.
 
-Sample output:
+#### Example Runs:
 ```
 Enter distance: 3
 Delivery cost: $0
@@ -201,7 +201,7 @@ A student qualifies for a scholarship if:
 
 Otherwise, print `"Not eligible"`.
 
-Example run:
+#### Example Runs:
 ```
 Enter average: 95
 Enter hours: 45
@@ -224,7 +224,7 @@ Compute the fine based on overdue days:
 
 Print the total fine.
 
-Sample output:
+#### Example Runs:
 ```
 Enter days overdue: 8
 Total fine: $16
@@ -240,7 +240,7 @@ A person can ride if both:
 
 Otherwise, print `"Sorry, you can’t ride."`
 
-Sample output:
+#### Example Runs:
 ```
 Enter age: 12
 Enter height: 130
@@ -261,7 +261,7 @@ The penalty for stunt driving is a roadside vehicle impound and a 30-day license
 
 Ask the driver for the posted speed limit and their observed speed, then output whether they are stunt driving or not.
 
-Sample output:
+#### Example Runs:
 ```
 Enter speed limit: 100
 Enter observed speed: 155
