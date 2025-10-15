@@ -8,8 +8,6 @@ In programming, we often need to make decisions — to execute certain parts of 
 
 Conditional statements allow programs to respond dynamically to input and logic, rather than executing the same sequence every time.
 
-<br><br>
-
 ## 1. Conditional Execution
 
 The simplest form of an `if` statement checks a condition, and if that condition is `true`, it executes the indented code block.
@@ -157,7 +155,7 @@ Negative
 <br><br>
 
 ### 3. Password Length Check
-Fill in the blanks to check if a password is **long enough**.
+Fill in the blanks to check if a password is long enough to meet an **8 character minimum length requirement**.
 
 ```java
 String password = readLine("Enter password: ");
@@ -198,19 +196,19 @@ Delivery cost: $10
 
 ### 5. Scholarship Eligibility
 A student qualifies for a scholarship if:
-- GPA ≥ 3.5  
-- AND community hours ≥ 40  
+- Grade 12 average is 90 percent or higher
+- At least 40 community service hours
 
 Otherwise, print `"Not eligible"`.
 
 Example run:
 ```
-Enter GPA: 3.8
+Enter average: 95
 Enter hours: 45
 Scholarship granted!
 ```
 ```
-Enter GPA: 3.2
+Enter average: 89
 Enter hours: 50
 Not eligible
 ```
@@ -236,9 +234,9 @@ Total fine: $16
 
 ### 7. Roller Coaster Eligibility
 Ask for height (cm) and age.  
-A person can ride if:
-- Age ≥ 10  
-- AND height ≥ 120  
+A person can ride if both:
+- Age is 10 or older
+- Height is 120 cm or taller
 
 Otherwise, print `"Sorry, you can’t ride."`
 
@@ -257,19 +255,21 @@ Sorry, you can’t ride.
 <br><br>
 
 ### 8. Ontario Stunt Driving Penalties
-Under Ontario's Highway Traffic Act, a driver is considered to be *stunt driving* if they are going 50 km/h or more over the speed limit on roads with a limit of 80 km/h or higher, or 40 km/h or more over the limit on roads with a limit less than 80 km/h. The penalty for stunt driving is a roadside vehicle impound and a 30-day license suspension.
+Under Ontario's Highway Traffic Act, a driver is considered to be *stunt driving* if they are going 50 km/h or more over the posted speed limit on roads with a limit of 80 km/h or higher, or 40 km/h or more over the limit on roads with a limit less than 80 km/h. 
+
+The penalty for stunt driving is a roadside vehicle impound and a 30-day license suspension.
 
 Ask the driver for the posted speed limit and their observed speed, then output whether they are stunt driving or not.
 
 Sample output:
 ```
 Enter speed limit: 100
-Enter observed speed: 160
+Enter observed speed: 155
 Stunt driving. License suspension and vehicle impound.
 ```
 ```
-Enter speed limit: 70
-Enter observed speed: 105
+Enter speed limit: 40
+Enter observed speed: 82
 Stunt driving. License suspension and vehicle impound.
 ```
 ```
@@ -286,31 +286,7 @@ Speeding ticket. Fine and demerit points.
 <br><br>
 
 ### 9. Electricity Bill Calculator
-Use nested `if` statements to compute cost:
-- Less than 100 kWh used → $0.10 per kWh
-- Under 200 kWh used but more than 100 kWh used → $0.15 per kWh
-- 200 kWh used or greater → $0.25 per kWh  
-
-In addition, add a flat $10 service fee to every bill.
-
-#### Example Runs:
-```
-Enter usage: 85
-Bill = 18.5
-```
-```
-Enter usage: 150
-Bill = 32.5
-```
-```
-Enter usage: 350
-Bill = 97.5
-```
-
-<br><br>
-
-### 10. Electricity Bill Calculator (Marginal Rates)
-In this version, each portion of electricity is billed at its own rate, similar to income tax brackets.
+Suppose an electric utility bills usage at its own rate, similar to income tax brackets.
 
 | Usage Tier (kWh) | Rate per kWh |
 |-----------------:|:-------------:|
@@ -318,7 +294,7 @@ In this version, each portion of electricity is billed at its own rate, similar 
 | Next 100 (101–200) | $0.15       |
 | Above 200        | $0.25         |
 
-Add a flat **$10 service fee** to every bill.
+Plus, add a flat **$10 service fee** to every bill.
 
 #### Example Runs:
 ```
@@ -335,7 +311,7 @@ Bill = 47.5
 ```
 ```
 Enter usage: 400
-Bill = 72.5
+Bill = 85.0
 ```
 
 **Explanation (for 400 kWh):**
@@ -344,3 +320,44 @@ Bill = 72.5
 - Remaining 200 × $0.25 = $50  
 - Plus $10 service fee
 - **Total is $85**
+
+<br><br>
+
+### 10. Movie Ticket Discount Calculator
+
+Create a program to determine a customer's movie ticket price based on their **age** and **day of the week**.
+
+Rules:
+- Regular ticket price is **$12**
+- Children under **12** get **50% off**
+- Seniors (**65+**) get **25% off**
+- **Tuesdays** are **50% off for everyone** (no other discounts apply on Tuesday)
+
+Ask for the user's age and the day of the week, then calculate and print the final price.
+
+#### Example Runs:
+```
+Enter age: 10
+Enter day: Sunday
+Ticket price: $6.0
+```
+```
+Enter age: 70
+Enter day: Tuesday
+Ticket price: $6.0
+```
+```
+Enter age: 40
+Enter day: Friday
+Ticket price: $12.0
+```
+```
+Enter age: 68
+Enter day: Wednesday
+Ticket price: $9.0
+```
+```
+Enter age: 16
+Enter day: Tuesday
+Ticket price: $6.0
+```
