@@ -6,11 +6,21 @@
 public class Main extends ConsoleProgram {
     @Override
     public void run() {
-        // === START WRITING YOUR CODE BELOW THIS LINE ===
+        // Get user input for limit, speeds
+        int speedLimit = readInt("Enter speed limit: ");
+        int speedObserved = readInt("Enter observed speed: ");
+        
+        // Determine stunt driving threshold
+        int stuntThreshold = speedLimit >= 80 ? 50 : 40;
 
-        String name = readLine("Enter your name: ");
-        System.out.println("Hello, " + name + "!");
-
-        // === END OF YOUR CODE ===
+        if (speedObserved <= speedLimit) {
+            System.out.println("Within limit. Drive safely.");
+        } else {
+            if ((speedObserved - speedLimit) >= stuntThreshold) {
+                System.out.println("Stunt driving. License suspension and vehicle impound.");
+            } else {
+                System.out.println("Speeding ticket. Fine and demerit points.");
+            }
+        }
     }
 }

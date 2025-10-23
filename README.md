@@ -1,4 +1,4 @@
-# Lesson: If Statements
+# Lesson: `If` Statements
 
 **Previous Lesson:** [Logical Operators & Expressions](https://github.com/SACHSTech/Lesson-Logical-Operators-and-Expressions)
 
@@ -118,7 +118,7 @@ While nesting can be powerful, deep nesting makes code **harder to read**. When 
 
 <br><br>
 
-## Practice Problems: If Statements
+## Practice Problems: `If` Statements
 
 ### 1. Comparing Two Numbers
 Fill in the missing condition so that the program prints which number is greater.
